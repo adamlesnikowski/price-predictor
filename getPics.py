@@ -1,4 +1,5 @@
-#Get AirBnB photos script for Paris
+#Get AirBnB photos script
+#Optionally run interactively in iPython, Jupyter and examine the db data frame or call getData(0, howeverManyImages)
 
 import sys
 import os
@@ -7,10 +8,13 @@ import numpy
 import urllib
 import time
 
-#City to read listings file from
+#City to read listings file from. In this case Paris.
+#Set read_csv_loc as location of where you downloaded and unpacked /data/listings.csv.gz
 read_csv_loc = '/home/adam/CVProjects/AirBnBConvNet/Data/PAR/listingsBig.csv'
+#Set out_image_base to wherever you want the image data to go
 out_image_base = '/home/adam/CVProjects/AirBnBConvNet/Data/Pics/PAR/'
 
+#pandas work
 db = pd.read_csv(read_csv_loc)
 print(db.keys())
 urls = db['xl_picture_url']
@@ -33,5 +37,5 @@ def getData(start, end):
             e = sys.exc_info()[0]
             print("<p>Error: %s </p>" % e )
 
-#Get all the data
+#Get all the data!
 getData(0, length)
