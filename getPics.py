@@ -8,7 +8,7 @@ import numpy
 import urllib
 import time
 
-#City to read listings file from. In this case Paris.
+#City to read listings file from. In this example Paris.
 #Set read_csv_loc as location of where you downloaded and unpacked /data/listings.csv.gz
 read_csv_loc = '/home/adam/CVProjects/AirBnBConvNet/Data/PAR/listingsBig.csv'
 #Set out_image_base to wherever you want the image data to go
