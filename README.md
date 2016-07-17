@@ -1,2 +1,2 @@
 # price-predictor
-Price predictor for house shares using a deep convolutional neural network
+Price predictor code for house shares using a deep convolutional neural network. In progress...
