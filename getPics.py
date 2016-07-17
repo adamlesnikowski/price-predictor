@@ -25,7 +25,7 @@ length = len(values)
 def getData(start, end):
     for i in xrange(start, end):
         delay =  abs(numpy.random.randn()) #samples from normal with mean 0, variance 1
-        time.sleep(delay)
+        time.sleep(delay)  #Be nice to the servers
         print("Delayed for %s seconds" % delay)
         try:
             link = values[i]
@@ -34,7 +34,7 @@ def getData(start, end):
             urllib.urlretrieve(link, out_image_location)
             print("Got image %s" % id)
         except:
-            e = sys.exc_info()[0]
+            e = sys.exc_info()[0]  #Pulls error info
             print("<p>Error: %s </p>" % e )
 
 #Get all the data!
